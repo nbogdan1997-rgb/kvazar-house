@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Квазар-Хаус — Строительство домов в Удмуртии под ключ</title>
+  <meta name="description" content="Строительство малоэтажных домов в Ижевске и Удмуртии. Керамоблок, газобетон, каркас, брус. Дома под ключ. Ипотека, материнский капитал. Бесплатный замер.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * { outline: none !important; }
+    body { margin: 0; padding: 0; }
+    img::selection, a::selection { background: transparent; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9f0', 100: '#d8f0d8', 200: '#b3e0b3', 300: '#7cc87c',
+              400: '#4aad4a', 500: '#2d8f2d', 600: '#1f6e1f', 700: '#1a5c1a',
+              800: '#174917', 900: '#143c14', 950: '#0a210a',
+            },
+          },
+          fontFamily: { sans: ['"Montserrat"', '"Inter"', 'system-ui', 'sans-serif'] },
+          borderRadius: { xl: '0.75rem', '2xl': '1rem', '3xl': '1.5rem', '4xl': '2rem' },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ШАПКА -->
+<header id="header" class="header fixed top-0 left-0 w-full z-50 transition-all duration-500">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-brand-200/50 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">К</div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-extrabold text-lg text-white header__logo-text transition-colors duration-300">Квазар-Хаус</span>
+          <span class="text-xs text-white/70 font-medium header__logo-subtext transition-colors duration-300">Строительство домов в Удмуртии</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="#about" class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full">О нас</a>
+        <a href="#projects" class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full">Проекты</a>
+        <a href="#materials" class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full">Материалы</a>
+        <a href="#prices" class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full">Цены</a>
+        <a href="#faq" class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-400 after:transition-all after:duration-300 hover:after:w-full">Вопросы</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="https://t.me/Ak12vazarhouse" target="_blank" class="text-sm text-white/80 hover:text-white transition-colors" title="Telegram">
+          <i class="fab fa-telegram-plane text-xl" style="color: #0088cc;"></i>
+        </a>
+        <a href="https://max.ru/u/f9LHodD0cOLdfWVrhKv976MfaPkcJSA78FWs1fvC1xZP-hZ6WF0YefWh4N0" target="_blank" class="text-sm text-white/80 hover:text-white transition-colors" title="MAX">
+          <svg class="w-5 h-5 inline-block" viewBox="0 0 24 24" fill="#1a237e"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>
+        </a>
+        <a href="tel:+79128562833" class="text-sm font-semibold text-white/90 hover:text-white transition-colors whitespace-nowrap flex items-center gap-2">
+          <span class="w-8 h-8 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center text-xs"><i class="fas fa-phone-alt"></i></span>
+          +7 (912) 856-28-33
+        </a>
+        <a href="#form" class="scroll-to-form bg-white text-brand-700 font-bold text-sm px-6 py-3 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-white/30 hover:scale-105 active:scale-95">
+          Получить расчёт <i class="fas fa-arrow-right ml-2 text-xs"></i>
+        </a>
+      </div>
+
+      <button id="burger" class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg transition-colors" aria-label="Открыть меню">
+        <span class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+        <span class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+        <span class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Мобильное меню -->
+  <nav id="nav-menu" class="lg:hidden fixed top-16 left-0 w-full bg-white/98 backdrop-blur-md shadow-lg border-t border-gray-100 transform -translate-y-full opacity-0 invisible transition-all duration-300">
+    <div class="container mx-auto px-4 py-6 flex flex-col gap-4">
+      <a href="#about" class="nav-link text-base font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-50">О нас</a>
+      <a href="#projects" class="nav-link text-base font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-50">Проекты</a>
+      <a href="#materials" class="nav-link text-base font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-50">Материалы</a>
+      <a href="#faq" class="nav-link text-base font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-50">Вопросы</a>
+      <a href="#contacts" class="nav-link text-base font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-50">Контакты</a>
+      <div class="pt-4 flex flex-col gap-3">
+        <a href="tel:+79128562833" class="text-base font-semibold text-gray-800"><i class="fas fa-phone-alt text-green-600 mr-2"></i> +7 (912) 856-28-33</a>
+        <div class="flex gap-3 pt-1 pl-1">
+          <a href="https://t.me/Ak12vazarhouse" target="_blank" class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-green-100 transition-colors" title="Telegram"><i class="fab fa-telegram-plane text-lg" style="color: #0088cc;"></i></a>
+          <a href="https://max.ru/u/f9LHodD0cOLdfWVrhKv976MfaPkcJSA78FWs1fvC1xZP-hZ6WF0YefWh4N0" target="_blank" class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-green-100 transition-colors" title="MAX"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="#1a237e"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- ГЛАВНЫЙ ЭКРАН -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=85" alt="" class="w-full h-full object-cover" style="filter: brightness(0.7);">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/50"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+  </div>
+  <div class="container mx-auto px-4 lg:px-8 relative z-10 pt-24 lg:pt-28">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm font-semibold px-5 py-2 rounded-full mb-8 border border-white/10">
+        <i class="fas fa-map-marker-alt text-brand-300 text-xs"></i>
+        <span>Строительство домов в Ижевске и по всей Удмуртии</span>
+      </div>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-tight mb-6 tracking-tight">
+        Построим ваш <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-400">идеальный дом</span> в Удмуртии
+      </h1>
+      <p class="text-xl sm:text-2xl text-white/80 max-w-3xl mx-auto mb-10 font-light">
+        Дома из керамоблока, газобетона, каркаса и бруса <span class="font-semibold text-white">под ключ</span>.
+        Работаем официально, помогаем с ипотекой и материнским капиталом.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+        <a href="#form" class="scroll-to-form group relative inline-flex items-center gap-3 bg-gradient-to-r from-brand-500 to-brand-600 text-white font-bold px-10 py-5 rounded-2xl text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/40 hover:scale-105 active:scale-95 overflow-hidden">
+          <span class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+          <span class="relative z-10 flex items-center gap-3"><i class="fas fa-calculator"></i>Рассчитать стоимость <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+        <a href="#projects" class="group inline-flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-semibold px-10 py-5 rounded-2xl text-lg transition-all duration-300 hover:bg-white/10 hover:shadow-xl active:scale-95 backdrop-blur-sm">
+          <i class="fas fa-images"></i>Смотреть проекты <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto">
+        <div class="flex items-center gap-3 text-white/80 justify-center"><div class="w-8 h-8 rounded-full bg-brand-500/30 backdrop-blur-sm flex items-center justify-center shrink-0"><i class="fas fa-check text-brand-300 text-xs"></i></div><span class="text-sm font-medium">Работаем официально, договор</span></div>
+        <div class="flex items-center gap-3 text-white/80 justify-center"><div class="w-8 h-8 rounded-full bg-brand-500/30 backdrop-blur-sm flex items-center justify-center shrink-0"><i class="fas fa-check text-brand-300 text-xs"></i></div><span class="text-sm font-medium">Фиксированная смета без доплат</span></div>
+        <div class="flex items-center gap-3 text-white/80 justify-center"><div class="w-8 h-8 rounded-full bg-brand-500/30 backdrop-blur-sm flex items-center justify-center shrink-0"><i class="fas fa-check text-brand-300 text-xs"></i></div><span class="text-sm font-medium">Ипотека от 4,8% и маткапитал</span></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-10 border-t border-white/10">
+        <div class="text-center"><div class="text-4xl lg:text-5xl font-black text-white">50+</div><div class="text-sm text-white/60">построенных домов</div></div>
+        <div class="text-center"><div class="text-4xl lg:text-5xl font-black text-white">7</div><div class="text-sm text-white/60">лет на рынке</div></div>
+        <div class="text-center"><div class="text-4xl lg:text-5xl font-black text-white">5</div><div class="text-sm text-white/60">городов Удмуртии</div></div>
+        <div class="text-center"><div class="text-4xl lg:text-5xl font-black text-white">5</div><div class="text-sm text-white/60">лет гарантии</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"><div class="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1"><div class="w-1.5 h-3 bg-white/60 rounded-full"></div></div></div>
+</section>
+
+<!-- О НАС -->
+<section id="about" class="py-20 lg:py-28 bg-white">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-brand-600 font-semibold text-sm uppercase tracking-[0.2em]">О компании</span>
+      <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mt-4 mb-6 leading-tight mx-auto max-w-3xl">Строим надёжные дома в Удмуртии с 2018 года</h2>
+      <p class="text-lg text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto">Квазар-Хаус это команда профессионалов, построившая более 50 объектов по всей Удмуртской Республике.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div class="flex flex-col items-center gap-3 bg-brand-50 rounded-2xl p-6 hover:shadow-lg transition-all"><div class="w-14 h-14 bg-brand-600 rounded-xl flex items-center justify-center"><i class="fas fa-hard-hat text-white text-xl"></i></div><div class="text-center"><h4 class="font-bold text-gray-800">Опытная бригада</h4><p class="text-sm text-gray-500">Мастера со стажем от 7 лет</p></div></div>
+        <div class="flex flex-col items-center gap-3 bg-brand-50 rounded-2xl p-6 hover:shadow-lg transition-all"><div class="w-14 h-14 bg-brand-600 rounded-xl flex items-center justify-center"><i class="fas fa-file-contract text-white text-xl"></i></div><div class="text-center"><h4 class="font-bold text-gray-800">Прозрачный договор</h4><p class="text-sm text-gray-500">Фиксированная смета без скрытых платежей</p></div></div>
+        <div class="flex flex-col items-center gap-3 bg-brand-50 rounded-2xl p-6 hover:shadow-lg transition-all"><div class="w-14 h-14 bg-brand-600 rounded-xl flex items-center justify-center"><i class="fas fa-clock text-white text-xl"></i></div><div class="text-center"><h4 class="font-bold text-gray-800">Соблюдаем сроки</h4><p class="text-sm text-gray-500">Чётко соблюдаем график строительства</p></div></div>
+        <div class="flex flex-col items-center gap-3 bg-brand-50 rounded-2xl p-6 hover:shadow-lg transition-all"><div class="w-14 h-14 bg-brand-600 rounded-xl flex items-center justify-center"><i class="fas fa-ruler-combined text-white text-xl"></i></div><div class="text-center"><h4 class="font-bold text-gray-800">Бесплатный замер</h4><p class="text-sm text-gray-500">Выезд инженера на участок бесплатно</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- МАТЕРИАЛЫ -->
+<section id="materials" class="py-20 lg:py-28 bg-gray-50">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-600 font-semibold text-sm uppercase tracking-[0.2em]">Материалы</span>
+      <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mt-4 mb-6">Выберите технологию строительства</h2>
+      <p class="text-lg text-gray-600">Подберём оптимальный вариант под ваш бюджет, участок и требования к энергоэффективности</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition border border-gray-100 hover:border-brand-200 hover:-translate-y-2"><div class="w-20 h-20 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center mb-6"><i class="fas fa-cubes text-red-500 text-3xl"></i></div><h3 class="text-2xl font-bold text-gray-800 mb-3">Керамоблок</h3><p class="text-gray-600 text-sm mb-6">Тёплый, экологичный, паропроницаемый.</p><div class="flex items-center justify-between pt-5 border-t border-gray-100"><span class="text-2xl font-black text-brand-600">от 75 000 руб/м2</span><span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full">под ключ</span></div></div>
+      <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition border border-gray-100 hover:border-brand-200 hover:-translate-y-2"><div class="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center mb-6"><i class="fas fa-th text-blue-500 text-3xl"></i></div><h3 class="text-2xl font-bold text-gray-800 mb-3">Газобетон</h3><p class="text-gray-600 text-sm mb-6">Лёгкий, тёплый, точная геометрия блоков.</p><div class="flex items-center justify-between pt-5 border-t border-gray-100"><span class="text-2xl font-black text-brand-600">от 65 000 руб/м2</span><span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full">под ключ</span></div></div>
+      <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition border border-gray-100 hover:border-brand-200 hover:-translate-y-2"><div class="w-20 h-20 bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl flex items-center justify-center mb-6"><i class="fas fa-vector-square text-amber-500 text-3xl"></i></div><h3 class="text-2xl font-bold text-gray-800 mb-3">Каркасный дом</h3><p class="text-gray-600 text-sm mb-6">Быстровозводимый, энергоэффективный.</p><div class="flex items-center justify-between pt-5 border-t border-gray-100"><span class="text-2xl font-black text-brand-600">от 55 000 руб/м2</span><span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full">под ключ</span></div></div>
+      <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition border border-gray-100 hover:border-brand-200 hover:-translate-y-2"><div class="w-20 h-20 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl flex items-center justify-center mb-6"><i class="fas fa-tree text-emerald-500 text-3xl"></i></div><h3 class="text-2xl font-bold text-gray-800 mb-3">Дом из бруса</h3><p class="text-gray-600 text-sm mb-6">Натуральное дерево, особый микроклимат.</p><div class="flex items-center justify-between pt-5 border-t border-gray-100"><span class="text-2xl font-black text-brand-600">от 70 000 руб/м2</span><span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full">под ключ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРОЕКТЫ -->
+<section id="projects" class="py-20 lg:py-28 bg-white">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-600 font-semibold text-sm uppercase tracking-[0.2em]">Портфолио</span>
+      <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mt-4 mb-6">Наши проекты</h2>
+      <p class="text-lg text-gray-600">Каждый проект уникален. Мы учтём все ваши пожелания и особенности участка</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition border border-gray-100 hover:-translate-y-2">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=85" alt="Дом Уютный" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 text-sm font-bold text-brand-700 shadow-lg"><i class="fas fa-cubes mr-1 text-red-500"></i> Керамоблок</div>
+          <div class="absolute bottom-4 left-4 text-white"><div class="text-2xl font-black">7 800 000 руб</div></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-xl text-gray-800 mb-1">Дом Уютный</h3>
+          <p class="text-gray-500 text-sm mb-4">120 м2 2 этажа 4 комнаты</p>
+          <div class="flex gap-2 flex-wrap mb-5"><span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">Фундамент плита</span><span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">Кровля металлочерепица</span></div>
+          <a href="#form" class="scroll-to-form w-full inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-3.5 rounded-2xl transition hover:shadow-lg active:scale-95">Хочу такой же <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+      </div>
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition border border-gray-100 hover:-translate-y-2">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=85" alt="Дом Скандинавия" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 text-sm font-bold text-amber-700 shadow-lg"><i class="fas fa-vector-square mr-1 text-amber-500"></i> Каркас</div>
+          <div class="absolute bottom-4 left-4 text-white"><div class="text-2xl font-black">4 950 000 руб</div></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-xl text-gray-800 mb-1">Дом Скандинавия</h3>
+          <p class="text-gray-500 text-sm mb-4">90 м2 1 этаж 3 комнаты</p>
+          <div class="flex gap-2 flex-wrap mb-5"><span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">Фундамент сваи</span><span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">Кровля мягкая</span></div>
+          <a href="#form" class="scroll-to-form w-full inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-3.5 rounded-2xl transition hover:shadow-lg active:scale-95">Хочу такой же <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+      </div>
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition border border-gray-100 hover:-translate-y-2">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=85" alt="Дом Усадьба" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 text-sm font-bold text-emerald-700 shadow-lg"><i class="fas fa-tree mr-1 text-emerald-500"></i> Брус</div>
+          <div class="absolute bottom-4 left-4 text-white"><div class="text-2xl font-black">9 800 000 руб</div></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-xl text-gray-800 mb-1">Дом Усадьба</h3>
+          <p class="text-gray-500 text-sm mb-4">140 м2 2 этажа 5 комнат</p>
+          <div class="flex gap-2 flex-wrap mb-5"><span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">Фундамент плита</span><span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">Фасад штукатурка</span></div>
+          <a href="#form" class="scroll-to-form w-full inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-3.5 rounded-2xl transition hover:shadow-lg active:scale-95">Хочу такой же <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ИПОТЕКА И ЭСКРОУ -->
+<section id="mortgage" class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-white">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="text-center max-w-4xl mx-auto mb-16">
+      <span class="text-brand-600 font-semibold text-sm uppercase tracking-[0.2em]">Финансы и безопасность</span>
+      <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mt-4 mb-6">Работаем по 186-ФЗ и 214-ФЗ с эскроу-счетами</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Ваши деньги защищены государством. Средства хранятся на эскроу-счетах и перечисляются нам только после подписания акта приема-передачи дома.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-5xl mx-auto">
+      <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-lg transition"><div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-shield-alt text-blue-600 text-2xl"></i></div><h4 class="font-bold text-gray-800 text-sm">Эскроу-счета</h4><p class="text-xs text-gray-500 mt-1">Средства защищены банком до сдачи дома</p></div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-lg transition"><div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-balance-scale text-green-600 text-2xl"></i></div><h4 class="font-bold text-gray-800 text-sm">214-ФЗ</h4><p class="text-xs text-gray-500 mt-1">Долевое строительство по закону</p></div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-lg transition"><div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-percent text-amber-600 text-2xl"></i></div><h4 class="font-bold text-gray-800 text-sm">Ипотека от 4,8%</h4><p class="text-xs text-gray-500 mt-1">Помогаем с одобрением в ведущих банках</p></div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-lg transition"><div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-baby text-red-500 text-2xl"></i></div><h4 class="font-bold text-gray-800 text-sm">Материнский капитал</h4><p class="text-xs text-gray-500 mt-1">Используем маткапитал для первого взноса</p></div>
+    </div>
+
+    <div class="text-center mb-16">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Наши партнёры</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-14">
+        <div class="flex flex-col items-center gap-2"><div class="w-20 h-20 lg:w-24 lg:h-24 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center hover:shadow-xl transition"><span class="text-2xl font-black text-green-700">СБЕР</span></div><span class="text-xs font-semibold text-gray-600">Сбербанк</span></div>
+        <div class="flex flex-col items-center gap-2"><div class="w-20 h-20 lg:w-24 lg:h-24 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center hover:shadow-xl transition"><span class="text-lg font-black text-red-600">ДОМ.РФ</span></div><span class="text-xs font-semibold text-gray-600">ДОМ.РФ</span></div>
+        <div class="flex flex-col items-center gap-2"><div class="w-20 h-20 lg:w-24 lg:h-24 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center hover:shadow-xl transition"><span class="text-2xl font-black text-blue-800">ВТБ</span></div><span class="text-xs font-semibold text-gray-600">ВТБ</span></div>
+      </div>
+    </div>
+
+    <div id="calc" class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3"><i class="fas fa-calculator text-brand-500 mr-2"></i> Калькулятор ипотеки</h3>
+        <p class="text-gray-600">Узнайте примерный ежемесячный платёж</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl p-8 lg:p-10 border border-gray-100">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <div>
+            <div class="mb-8">
+              <div class="flex items-center justify-between mb-3"><label class="text-sm font-semibold text-gray-700">Стоимость дома, руб</label><span class="text-2xl font-black text-brand-600" id="price-display">8 000 000</span></div>
+              <input type="range" id="price-slider" min="2000000" max="20000000" step="100000" value="8000000" class="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-green-600">
+              <div class="flex justify-between text-xs text-gray-400 mt-1"><span>2 млн руб</span><span>20 млн руб</span></div>
+            </div>
+            <div class="mb-8">
+              <div class="flex items-center justify-between mb-3"><label class="text-sm font-semibold text-gray-700">Первоначальный взнос, %</label><span class="text-2xl font-black text-brand-600" id="downpayment-display">20%</span></div>
+              <input type="range" id="downpayment-slider" min="10" max="50" step="1" value="20" class="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-green-600">
+              <div class="flex justify-between text-xs text-gray-400 mt-1"><span>10%</span><span>50%</span></div>
+            </div>
+            <div class="mb-8">
+              <div class="flex items-center justify-between mb-3"><label class="text-sm font-semibold text-gray-700">Срок кредита, лет</label><span class="text-2xl font-black text-brand-600" id="term-display">15</span></div>
+              <input type="range" id="term-slider" min="5" max="30" step="1" value="15" class="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-green-600">
+              <div class="flex justify-between text-xs text-gray-400 mt-1"><span>5 лет</span><span>30 лет</span></div>
+            </div>
+            <div class="mb-6">
+              <div class="flex items-center justify-between mb-3"><label class="text-sm font-semibold text-gray-700">Процентная ставка, %</label><span class="text-2xl font-black text-brand-600" id="rate-display">5.5</span></div>
+              <input type="range" id="rate-slider" min="2" max="15" step="0.1" value="5.5" class="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-green-600">
+              <div class="flex justify-between text-xs text-gray-400 mt-1"><span>2%</span><span>15%</span></div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-brand-800 to-brand-900 rounded-3xl p-8 lg:p-10 text-white flex flex-col justify-center">
+            <div class="text-center"><p class="text-white/60 text-sm uppercase tracking-wider mb-1">Ежемесячный платёж</p><div class="text-5xl lg:text-6xl font-black mb-2" id="monthly-payment">64 752</div><p class="text-white/40 text-sm">руб в месяц</p></div>
+            <div class="border-t border-white/10 my-8"></div>
+            <div class="grid grid-cols-2 gap-6 text-center">
+              <div><p class="text-white/50 text-xs uppercase tracking-wider mb-1">Сумма кредита</p><p class="text-xl font-bold" id="loan-amount">6 400 000 руб</p></div>
+              <div><p class="text-white/50 text-xs uppercase tracking-wider mb-1">Переплата</p><p class="text-xl font-bold" id="overpayment">5 255 360 руб</p></div>
+              <div><p class="text-white/50 text-xs uppercase tracking-wider mb-1">Ставка</p><p class="text-xl font-bold" id="rate-result">5.5%</p></div>
+              <div><p class="text-white/50 text-xs uppercase tracking-wider mb-1">Срок</p><p class="text-xl font-bold" id="term-result">15 лет</p></div>
+            </div>
+            <div class="mt-8"><a href="#form" class="scroll-to-form block w-full bg-white text-brand-800 font-bold text-center px-6 py-4 rounded-2xl transition hover:shadow-2xl hover:scale-[1.02] active:scale-95"><i class="fas fa-calculator mr-2"></i> Получить точный расчёт</a></div>
+            <p class="text-white/30 text-xs text-center mt-4">Расчёт предварительный. Точные условия в банке</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  var priceSlider = document.getElementById('price-slider');
+  var downpaymentSlider = document.getElementById('downpayment-slider');
+  var termSlider = document.getElementById('term-slider');
+  var rateSlider = document.getElementById('rate-slider');
+  var priceDisplay = document.getElementById('price-display');
+  var downpaymentDisplay = document.getElementById('downpayment-display');
+  var termDisplay = document.getElementById('term-display');
+  var rateDisplay = document.getElementById('rate-display');
+  var monthlyPayment = document.getElementById('monthly-payment');
+  var loanAmount = document.getElementById('loan-amount');
+  var overpayment = document.getElementById('overpayment');
+  var rateResult = document.getElementById('rate-result');
+  var termResult = document.getElementById('term-result');
+
+  function formatNumber(n) { return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+
+  function calculate() {
+    var price = parseInt(priceSlider.value);
+    var downPercent = parseInt(downpaymentSlider.value);
+    var years = parseInt(termSlider.value);
+    var rate = parseFloat(rateSlider.value);
+    var downAmount = Math.round(price * downPercent / 100);
+    var loan = price - downAmount;
+    var months = years * 12;
+    var monthlyRate = rate / 100 / 12;
+    var payment;
+    if (monthlyRate === 0) { payment = loan / months; }
+    else { payment = loan * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1); }
+    var totalPayment = payment * months;
+    var overpay = totalPayment - loan;
+    priceDisplay.textContent = formatNumber(price) + ' руб';
+    downpaymentDisplay.textContent = downPercent + '%';
+    termDisplay.textContent = years;
+    rateDisplay.textContent = rate.toFixed(1);
+    monthlyPayment.textContent = formatNumber(Math.round(payment));
+    loanAmount.textContent = formatNumber(loan) + ' руб';
+    overpayment.textContent = formatNumber(Math.round(overpay)) + ' руб';
+    rateResult.textContent = rate.toFixed(1) + '%';
+    termResult.textContent = years + ' лет';
+  }
+
+  if (priceSlider) {
+    priceSlider.addEventListener('input', calculate);
+    downpaymentSlider.addEventListener('input', calculate);
+    termSlider.addEventListener('input', calculate);
+    rateSlider.addEventListener('input', calculate);
+    calculate();
+  }
+})();
+</script>
+  <!-- ФОРМА ЗАЯВКИ -->
+  <section id="form" class="py-20 bg-white">
+    <div class="max-w-md mx-auto px-4">
+      <div class="bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-100">
+        <h3 class="text-2xl font-bold text-gray-900 mb-2 text-center">Оставить заявку</h3>
+        <p class="text-gray-600 text-sm text-center mb-6">Менеджер свяжется с вами для консультации.</p>
+        <form class="space-y-4">
+          <input type="text" placeholder="Ваше имя" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white">
+          <input type="tel" placeholder="Телефон" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white">
+          <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-md transition">Отправить заявку &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПОДВАЛ -->
+  <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <span class="text-white font-bold text-xl block mb-3">СК Квазар-Хаус</span>
+        <p class="text-sm leading-relaxed">Профессиональное проектирование и строительство индивидуальных жилых домов в Ижевске и Удмуртской Республике.</p>
+      </div>
+      <div>
+        <span class="text-white font-semibold block mb-3">Контакты</span>
+        <p class="text-sm mb-1">Телефон: <a href="tel:+79128562833" class="hover:text-white transition">+7 (912) 856-28-33</a></p>
+        <p class="text-sm mb-4">Режим работы: Пн-Пт 09:00 - 18:00</p>
+        <div class="flex gap-3">
+          <a href="https://t.me/Ak12vazarhouse" target="_blank" class="w-9 h-9 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-green-700 transition-colors" title="Telegram"><i class="fab fa-telegram-plane text-sm" style="color: #0088cc;"></i></a>
+          <a href="https://max.ru/u/f9LHodD0cOLdfWVrhKv976MfaPkcJSA78FWs1fvC1xZP-hZ6WF0YefWh4N0" target="_blank" class="w-9 h-9 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-green-700 transition-colors" title="MAX"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="#1a237e"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg></a>
+        </div>
+      </div>
+      <div class="text-sm">
+        <span class="text-white font-semibold block mb-3">Реквизиты организации</span>
+        <p class="text-white font-medium mb-1">ООО Квазар</p>
+        <p class="text-xs mb-1"><span class="text-gray-500">ИНН/КПП:</span> 1832138676 / 184001001</p>
+        <p class="text-xs mb-2"><span class="text-gray-500">ОГРН:</span> 1161832060235</p>
+        <p class="text-xs leading-relaxed text-gray-500"><span class="text-gray-400 font-medium">Юр. адрес:</span> 426073, Удмуртская Респ., г. Ижевск, Молодежная ул., зд. 111/2, к. 202/2, корпус 202, блок 2 литер б/помещ. 133</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+      &copy; 2025 Квазар-Хаус. Все права защищены. Информация на сайте не является публичной офертой.
+    </div>
+  </footer>
+
+</body>
+</html>
