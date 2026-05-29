@@ -644,5 +644,62 @@
     </div>
   </footer>
 
+
+<!-- ПЛАВАЮЩАЯ КНОПКА "ЗАКАЗАТЬ ЗВОНОК" -->
+<div id="callback-button" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+  <!-- Сама кнопка -->
+  <button id="callback-btn" onclick="toggleCallbackForm()" class="w-14 h-14 bg-brand-600 hover:bg-brand-700 text-white rounded-full shadow-2xl hover:shadow-lg hover:shadow-brand-300/50 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95" aria-label="Заказать звонок">
+    <i class="fas fa-phone-alt text-xl"></i>
+  </button>
+  
+  <!-- Форма обратного звонка (спрятана по умолчанию) -->
+  <div id="callback-form" class="hidden bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80 mb-2 transition-all duration-300">
+    <div class="flex items-center justify-between mb-4">
+      <h4 class="font-bold text-gray-800 text-lg">Заказать звонок</h4>
+      <button onclick="toggleCallbackForm()" class="text-gray-400 hover:text-gray-600 transition"><i class="fas fa-times"></i></button>
+    </div>
+    <p class="text-sm text-gray-500 mb-4">Оставьте номер — мы перезвоним в течение 15 минут</p>
+    <form id="callbackFormElement" onsubmit="submitCallbackForm(event)">
+      <input type="text" placeholder="Ваше имя" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-gray-50 mb-3 text-sm">
+      <input type="tel" placeholder="+7 (___) ___-__-__" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-gray-50 mb-4 text-sm">
+      <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition hover:shadow-lg active:scale-95 text-sm">
+        <i class="fas fa-phone-alt mr-2"></i> Перезвоните мне
+      </button>
+    </form>
+    <p class="text-xs text-gray-400 mt-3 text-center">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+  </div>
+</div>
+
+<script>
+function toggleCallbackForm() {
+  var form = document.getElementById('callback-form');
+  form.classList.toggle('hidden');
+}
+
+function submitCallbackForm(e) {
+  e.preventDefault();
+  var btn = e.target.querySelector('button[type="submit"]');
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Отправка...';
+  btn.disabled = true;
+  
+  // Пока заявка никуда не отправляется (просто имитация)
+  setTimeout(function() {
+    btn.innerHTML = '<i class="fas fa-check mr-2"></i> Спасибо! Мы перезвоним';
+    btn.classList.remove('bg-brand-600', 'hover:bg-brand-700');
+    btn.classList.add('bg-green-500');
+    
+    setTimeout(function() {
+      var form = document.getElementById('callback-form');
+      form.classList.add('hidden');
+      btn.innerHTML = '<i class="fas fa-phone-alt mr-2"></i> Перезвоните мне';
+      btn.classList.add('bg-brand-600', 'hover:bg-brand-700');
+      btn.classList.remove('bg-green-500');
+      btn.disabled = false;
+      e.target.reset();
+    }, 2000);
+  }, 1000);
+}
+</script>
+
 </body>
 </html>
