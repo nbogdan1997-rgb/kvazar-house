@@ -686,30 +686,31 @@ function submitCallbackForm(e) {
 
   var message = '\u{1F514} \u041D\u043E\u0432\u0430\u044F \u0437\u0430\u044F\u0432\u043A\u0430 \u0441 \u0441\u0430\u0439\u0442\u0430!\n\u0418\u043C\u044F: ' + name + '\n\u0422\u0435\u043B\u0435\u0444\u043E\u043D: ' + phone;
 
-  fetch('https://api.telegram.org/bot' + '8957793123:AAHlupCYRqGst-Kn_uj-SoBy_ESqHbN8l8U' + '/sendMessage', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: '6974840864', text: message })
-  })
-  .then(function(response) { return response.json(); })
-  .then(function(data) {
-    btn.innerHTML = '<i class="fas fa-check mr-2"></i> \u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u041C\u044B \u043F\u0435\u0440\u0435\u0437\u0432\u043E\u043D\u0438\u043C';
-    btn.classList.remove('bg-brand-600', 'hover:bg-brand-700');
-    btn.classList.add('bg-green-500');
-    setTimeout(function() {
-      var form = document.getElementById('callback-form');
-      form.classList.add('hidden');
-      btn.innerHTML = '<i class="fas fa-phone-alt mr-2"></i> \u041F\u0435\u0440\u0435\u0437\u0432\u043E\u043D\u0438\u0442\u0435 \u043C\u043D\u0435';
-      btn.classList.add('bg-brand-600', 'hover:bg-brand-700');
-      btn.classList.remove('bg-green-500');
-      btn.disabled = false;
-      e.target.reset();
-    }, 2000);
-  })
-  .catch(function() {
-    btn.innerHTML = '\u041E\u0448\u0438\u0431\u043A\u0430. \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0451 \u0440\u0430\u0437';
-    btn.disabled = false;
-  });
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://api.telegram.org/bot8957793123:AAHlupCYRqGst-Kn_uj-SoBy_ESqHbN8l8U/sendMessage', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        btn.innerHTML = '<i class="fas fa-check mr-2"></i> \u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u041C\u044B \u043F\u0435\u0440\u0435\u0437\u0432\u043E\u043D\u0438\u043C';
+        btn.classList.remove('bg-brand-600', 'hover:bg-brand-700');
+        btn.classList.add('bg-green-500');
+        setTimeout(function() {
+          var form = document.getElementById('callback-form');
+          form.classList.add('hidden');
+          btn.innerHTML = '<i class="fas fa-phone-alt mr-2"></i> \u041F\u0435\u0440\u0435\u0437\u0432\u043E\u043D\u0438\u0442\u0435 \u043C\u043D\u0435';
+          btn.classList.add('bg-brand-600', 'hover:bg-brand-700');
+          btn.classList.remove('bg-green-500');
+          btn.disabled = false;
+          e.target.reset();
+        }, 2000);
+      } else {
+        btn.innerHTML = '\u041E\u0448\u0438\u0431\u043A\u0430. \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0451 \u0440\u0430\u0437';
+        btn.disabled = false;
+      }
+    }
+  };
+  xhr.send(JSON.stringify({ chat_id: '6974840864', text: message }));
 }
 </script>
 
