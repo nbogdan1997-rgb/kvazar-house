@@ -106,7 +106,7 @@
   </div>
   <div class="container mx-auto px-4 lg:px-8 relative z-10 pt-24 lg:pt-28">
     <div class="max-w-4xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm font-semibold px-5 py-2 rounded-full mb-8 border border-white/10">
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm font-semibold px-5 py-2 rounded-full mb-8 border border-white/10 whitespace-nowrap">
         <i class="fas fa-map-marker-alt text-brand-300 text-xs"></i>
         <span>Строительство домов в Ижевске и по всей Удмуртии</span>
       </div>
@@ -164,7 +164,7 @@
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="text-brand-600 font-semibold text-sm uppercase tracking-[0.2em]">Материалы</span>
       <h2 class="text-2xl sm:text-3xl lg:text-5xl font-black text-gray-900 mt-3 sm:mt-4 mb-4 sm:mb-6">Выберите технологию строительства</h2>
-      <p class="text-lg font-bold text-gray-900">Подберём оптимальный вариант под ваш бюджет, участок и требования к энергоэффективности</p>
+      <p class="text-lg font-bold text-gray-900 leading-relaxed">Подберём оптимальный вариант под ваш бюджет, участок и требования к энергоэффективности</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition border border-gray-100 hover:border-brand-200 hover:-translate-y-2"><div class="w-20 h-20 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center mb-6"><i class="fas fa-cubes text-red-500 text-3xl"></i></div><h3 class="text-2xl font-bold text-gray-800 mb-3">Керамоблок</h3><p class="text-gray-600 text-sm mb-6">Тёплый, экологичный, паропроницаемый.</p><div class="flex items-center justify-between pt-5 border-t border-gray-100"><span class="text-2xl font-black text-brand-600">от 75 000 руб/м2</span><span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full">под ключ</span></div></div>
@@ -484,7 +484,7 @@
       <h2 class="text-2xl sm:text-3xl lg:text-5xl font-black text-gray-900 mt-3 sm:mt-4 mb-4 sm:mb-6">Рассчитайте стоимость дома</h2>
       <p class="text-lg font-bold text-gray-900">Выберите параметры и узнайте ориентировочную стоимость строительства под ключ</p>
     </div>
-    <div class="max-w-4xl mx-auto bg-gray-50 rounded-3xl p-4 sm:p-6 lg:p-10 shadow-lg border border-gray-100">
+    <div class="max-w-4xl mx-auto bg-gray-50 rounded-3xl p-4 sm:p-6 lg:p-10 shadow-lg border border-gray-100 overflow-hidden">
       <div class="grid md:grid-cols-2 gap-10">
         <div>
           <div class="mb-6">
@@ -518,16 +518,16 @@
           </div>
           <div class="mb-4">
             <label class="text-sm font-semibold text-gray-700 mb-2 block">Этажность</label>
-            <div class="flex gap-3">
-              <label class="flex-1 flex items-center justify-center gap-2 bg-white rounded-xl px-2 sm:px-4 py-3 border border-gray-200 cursor-pointer hover:border-brand-300 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50 text-xs sm:text-sm">
+            <div class="flex gap-3 flex-wrap">
+              <label class="flex-1 flex items-center justify-center gap-1 bg-white rounded-xl px-1 sm:px-4 py-2 sm:py-3 border border-gray-200 cursor-pointer hover:border-brand-300 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50 text-[10px] sm:text-sm leading-tight">
                 <input type="radio" name="floors" value="1" checked class="accent-brand-600">
                 <span class="font-semibold text-gray-800 text-sm">1 этаж</span>
               </label>
-              <label class="flex-1 flex items-center justify-center gap-2 bg-white rounded-xl px-2 sm:px-4 py-3 border border-gray-200 cursor-pointer hover:border-brand-300 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50 text-xs sm:text-sm">
+              <label class="flex-1 flex items-center justify-center gap-1 bg-white rounded-xl px-1 sm:px-4 py-2 sm:py-3 border border-gray-200 cursor-pointer hover:border-brand-300 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50 text-[10px] sm:text-sm leading-tight">
                 <input type="radio" name="floors" value="1.15">
                 <span class="font-semibold text-gray-800 text-sm">1.5 этажа</span>
               </label>
-              <label class="flex-1 flex items-center justify-center gap-2 bg-white rounded-xl px-2 sm:px-4 py-3 border border-gray-200 cursor-pointer hover:border-brand-300 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50 text-xs sm:text-sm">
+              <label class="flex-1 flex items-center justify-center gap-1 bg-white rounded-xl px-1 sm:px-4 py-2 sm:py-3 border border-gray-200 cursor-pointer hover:border-brand-300 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50 text-[10px] sm:text-sm leading-tight">
                 <input type="radio" name="floors" value="1.3">
                 <span class="font-semibold text-gray-800 text-sm">2 этажа</span>
               </label>
@@ -625,7 +625,7 @@
         <span class="text-white font-semibold block mb-3">Контакты</span>
         <p class="text-sm mb-1">Телефон: <a href="tel:+79128562833" class="hover:text-white transition">+7 (912) 856-28-33</a></p>
         <p class="text-sm mb-4">Режим работы: Пн-Пт 09:00 - 18:00</p>
-        <div class="flex gap-3">
+        <div class="flex gap-3 flex-wrap">
           <a href="https://t.me/Ak12vazarhouse" target="_blank" class="w-9 h-9 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-green-700 transition-colors" title="Telegram"><i class="fab fa-telegram-plane text-sm" style="color: #0088cc;"></i></a>
           <a href="https://max.ru/u/f9LHodD0cOLdfWVrhKv976MfaPkcJSA78FWs1fvC1xZP-hZ6WF0YefWh4N0" target="_blank" class="w-9 h-9 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-green-700 transition-colors" title="MAX"><svg class="w-5 h-5 inline-block" viewBox="0 0 24 24" fill="none"><rect x="1" y="1" width="22" height="22" rx="5" fill="#1a237e"/><text x="12" y="17" text-anchor="middle" font-size="14" font-weight="800" font-family="Arial, Helvetica, sans-serif" fill="white">M</text></svg></a>
         </div>
