@@ -605,7 +605,7 @@
       <div class="bg-gray-50 p-8 rounded-2xl shadow-md border border-gray-100">
         <h3 class="text-2xl font-bold text-gray-900 mb-2 text-center">Оставить заявку</h3>
         <p class="text-gray-600 text-sm text-center mb-6">Менеджер свяжется с вами для консультации.</p>
-        <form class="space-y-4">
+        <form id="main-form" class="space-y-4">
           <input type="text" placeholder="Ваше имя" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white">
           <input type="tel" placeholder="Телефон" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white">
           <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-md transition">Отправить заявку &rarr;</button>
@@ -658,7 +658,7 @@
       <button onclick="toggleCallbackForm()" class="text-gray-400 hover:text-gray-600 transition"><i class="fas fa-times"></i></button>
     </div>
     <p class="text-sm text-gray-500 mb-4">Оставьте номер — мы перезвоним в течение 15 минут</p>
-    <form id="callbackFormElement" onsubmit="submitCallbackForm(event)">
+    <form id="callback-form" onsubmit="return false;">
       <input type="text" placeholder="Ваше имя" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-gray-50 mb-3 text-sm">
       <input type="tel" placeholder="+7 (___) ___-__-__" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-gray-50 mb-4 text-sm">
       <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition hover:shadow-lg active:scale-95 text-sm">
@@ -713,5 +713,6 @@ function submitCallbackForm(e) {
 }
 </script>
 
+  <script src="script.js"></script>
 </body>
 </html>

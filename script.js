@@ -389,3 +389,92 @@ if (scrollTopBtn) {
 }
 
 console.log('Сайт строительной компании «Квазар-Хаус» загружен и готов к работе!');
+
+// ============================================================
+// 11. ОТПРАВКА ФОРМЫ В TELEGRAM
+// ============================================================
+
+const TG_TOKEN = '8957793123:AAHlupCYRqGst-Kn_uj-SoBy_ESqHbN8l8U';
+const TG_CHAT_ID = '6974840864';
+
+function sendToTelegram(name, phone, source = 'Форма заявки') {
+  const message = `🔔 Новая заявка с сайта!\nИсточник: ${source}\nИмя: ${name}\nТелефон: ${phone}`;
+  
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      console.log('Telegram response:', xhr.status, xhr.responseText);
+    }
+  };
+  xhr.send(JSON.stringify({
+    chat_id: TG_CHAT_ID,
+    text: message,
+    parse_mode: 'HTML'
+  }));
+}
+
+// Функция для отправки формы (вызывается из HTML)
+window.submitForm = function(formId, sourceText) {
+  const form = document.getElementById(formId);
+  const nameInput = form.querySelector('input[type="text"]');
+  const phoneInput = form.querySelector('input[type="tel"]');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  
+  const name = nameInput.value.trim();
+  const phone = phoneInput.value.trim();
+  
+  if (!name || name.length < 2) {
+    alert('Пожалуйста, введите имя');
+    nameInput.focus();
+    return;
+  }
+  if (!phone || phone.replace(/\D/g, '').length < 10) {
+    alert('Пожалуйста, введите номер телефона полностью');
+    phoneInput.focus();
+    return;
+  }
+  
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Отправка...';
+  submitBtn.disabled = true;
+  
+  sendToTelegram(name, phone, sourceText);
+  
+  submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i> Спасибо! Мы перезвоним';
+  submitBtn.style.backgroundColor = '#22c55e';
+  
+  setTimeout(function() {
+    submitBtn.innerHTML = sourceText === 'Обратный звонок' 
+      ? '<i class="fas fa-phone-alt mr-2"></i> Перезвоните мне'
+      : 'Отправить заявку →';
+    submitBtn.style.backgroundColor = '';
+    submitBtn.disabled = false;
+    form.reset();
+    
+    // Закрываем форму обратного звонка
+    if (formId === 'callback-form') {
+      form.classList.add('hidden');
+    }
+  }, 3000);
+};
+
+// ============================================================
+// 12. ФОРМА ОБРАТНОГО ЗВОНКА (ПЛАВАЮЩАЯ КНОПКА)
+// ============================================================
+
+window.toggleCallbackForm = function() {
+  const form = document.getElementById('callback-form');
+  if (form) {
+    form.classList.toggle('hidden');
+  }
+};
+
+// Закрытие формы при клике вне её
+document.addEventListener('click', function(e) {
+  const callbackForm = document.getElementById('callback-form');
+  const callbackBtn = document.getElementById('callback-button');
+  if (callbackForm && !callbackForm.contains(e.target) && !callbackBtn?.contains(e.target)) {
+    callbackForm.classList.add('hidden');
+  }
+});
